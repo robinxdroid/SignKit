@@ -1,7 +1,7 @@
 # SignKit
 微信签名工具增强,根据包名获取MD5/SHA1/SHA-256，可复制
 
-<img src="https://raw.githubusercontent.com/robinxdroid/SignKit/main/device-2020-12-07-145151.png" width="480" height="720" align="middle" />
+<img src="https://raw.githubusercontent.com/robinxdroid/SignKit/main/device-2020-12-07-145151.png" width="480" height="1080" align="middle" />
 
 # Usage
 
