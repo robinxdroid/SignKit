@@ -46,14 +46,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="tips:微信签名工具使用的是MD5" />
+        android:text="tips:微信签名工具使用的是MD5"
+        android:textColor="#C5C5C5"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/tv_signature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#4CAF50"
         android:textIsSelectable="true"
-        android:text="" />
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/tv_copy"

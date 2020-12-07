@@ -5,6 +5,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import net.robinx.signkit.databinding.ActivityMainBinding
 
@@ -18,6 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvMd5.setOnClickListener {
             val pkgName = binding.etPkgname.text.toString().trim()
+            if (pkgName.isNullOrEmpty()) {
+                Toast.makeText(this, "need package name", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             val result = Sign.getSign(this, pkgName)
             binding.tvSignature.text = result
 
@@ -26,6 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvSha1.setOnClickListener {
             val pkgName = binding.etPkgname.text.toString().trim()
+            if (pkgName.isNullOrEmpty()) {
+                Toast.makeText(this, "need package name", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             val result = Sign.getSign(this, pkgName, Encrypt.SHA1)
             binding.tvSignature.text = result
 
@@ -35,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvSha256.setOnClickListener {
             val pkgName = binding.etPkgname.text.toString().trim()
+            if (pkgName.isNullOrEmpty()) {
+                Toast.makeText(this, "need package name", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             val result = Sign.getSign(this, pkgName, Encrypt.SHA_256)
             binding.tvSignature.text = result
 
